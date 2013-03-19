@@ -11,9 +11,9 @@ class Home_Controller extends Base_Controller {
 				$params = $indexModel->params;
 
 
-				return View::Create('tester.test', array(
+				/*return View::Create('tester.test', array(
 						'test' => 'hello world',
-				));
+				));*/
 		}
 
 }
