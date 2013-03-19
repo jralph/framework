@@ -4,11 +4,16 @@ class Home_Controller extends Base_Controller {
 
 		public function action_index($values)
 		{
-				$param = Params::set($values, array(
-						'name',
-						'name2'
-				));
+				$indexModel = new HomeIndex_Model;
+				$indexModel->setNames(array('name1'));
+				$indexModel->setParams($values);
+				$indexModel->checkParams();
+				$params = $indexModel->params;
 
+
+				return View::Create('tester.test', array(
+						'test' => 'hello world',
+				));
 		}
 
 }

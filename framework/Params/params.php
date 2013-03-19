@@ -13,11 +13,25 @@
 
 class Params {
 
-		public static function set($params, $names = array())
+		/**
+		 * Checks through all of the paramaters passed in the url and gives them a name to be used.
+		 * If more params than names are given, it will skip the end params.
+		 * If less params than names are given, it will fail.
+		 *
+		 * Function will create an object the names and set a variable in the object as each name and
+		 * the value of that variable as the value of the param.
+		 *
+		 *
+		 * @param array $params
+		 * @param array $names
+		 *
+		 */
+		public static function check($params, $names)
 		{
 				if( ! is_array($params) )
 				{
-						$param[$name[0]] = $params;
+						$param = array();
+						$param[$names] = $params;
 				}
 					else
 				{
@@ -28,7 +42,7 @@ class Params {
 						foreach($params as $param_value)
 						{
 								$param[$names[$i]] = $param_value;
-								if($i == $total)
+								if($i+1 == $total)
 								{
 										break;
 								}
@@ -40,11 +54,18 @@ class Params {
 
 						if(count($param) < $total)
 						{
-								return 'ERROR: Missing Params!';
+								return false;
 						}
 				}
 
-				return $param;
+
+				$object = new stdClass;
+				foreach($param as $key => $value)
+				{
+						$object->{$key} = $value;
+				}
+
+				return $object;
 		}
 
 }
