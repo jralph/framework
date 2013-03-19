@@ -31,7 +31,11 @@ class Params {
 				if( ! is_array($params) )
 				{
 						$param = array();
-						$param[$names] = $params;
+						if( isset($params) )
+						{
+								$param[$names] = $params;
+						}
+
 				}
 					else
 				{
