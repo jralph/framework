@@ -9,6 +9,8 @@ class Home_Controller extends Base_Controller {
 				$indexModel->setParams($values);
 				$indexModel->checkParams();
 				$params = $indexModel->params;
+
+
 		}
 
 }
