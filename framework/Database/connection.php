@@ -151,7 +151,8 @@ class Connection {
             $i++;
         }
 
-        $data = array_shift(array_slice($object, 0, 1));
+        $data = array_slice($object, 0, 1);
+        $data = array_shift($data);
 
         return $data;
 
@@ -175,8 +176,8 @@ class Connection {
             $object[$i] = (object) $data;
             $i++;
         }
-
-        $data = array_shift(array_slice($object, $count-1, $count));
+        $data = array_slice($object, $count-1, $count);
+        $data = array_shift($data);
 
         return $data;
     }

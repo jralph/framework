@@ -11,6 +11,8 @@ require path('sys').'View'.DS.'view.php';
 require path('sys').'Config'.DS.'config.php';
 require path('sys').'Config'.DS.'configuration.php';
 require path('sys').'URL'.DS.'url.php';
+require path('sys').'Hash'.DS.'hash.php';
+require path('sys').'Authenticate'.DS.'authenticate.php';
 require path('app').'controllers'.DS.'base.php';
 require path('app').'controllers'.DS.'error.php';
 require path('app').'models'.DS.'base_model.php';

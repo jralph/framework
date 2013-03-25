@@ -10,7 +10,6 @@ class Home_Controller extends Base_Controller {
 				$indexModel->checkParams();
 				$params = $indexModel->params;
 
-				echo URL::to('home');
 		}
 
 }

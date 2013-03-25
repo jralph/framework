@@ -25,7 +25,7 @@
 return array(
     'driver'    => 'mysql',
     'host'      => 'localhost',
-    'database'  => 'doit',
+    'database'  => 'test',
     'username'  => 'root',
-    'password'  => 'KasWrp1a',
+    'password'  => '',
 );
