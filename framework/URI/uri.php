@@ -13,7 +13,7 @@ class URI {
 
 		public function get()
 		{
-				if( isset($_SERVER['PATH_INFO']))
+				if( isset($_SERVER['PATH_INFO']) )
 				{
 						$uri = explode('/', $_SERVER['PATH_INFO']);
 						$this->controller = $uri[1];
