@@ -27,4 +27,3 @@ $uri->get();
 $loader = new Loader($uri->controller, $uri->action, $uri->urlOptions);
 $controller = $loader->CreateController();
 $controller->ExecuteAction();
-
